@@ -113,10 +113,10 @@ h2 {
 
 .note {
     padding-bottom: 16px;
-    font-family: Bellota;
+    font-family: Bellota !important;
     font-size: 24px;
     line-height: 80%;
-    text-align: center;
+    text-align: center !important;
     color: #292929;
     z-index: 20;
 }
