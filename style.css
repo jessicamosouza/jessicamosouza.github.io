@@ -5,7 +5,7 @@
 
 @font-face {
     font-family: 'noah-regular';
-    src: url('noah-regular-webfont.woff2') format('woff2'), url('noah-regular-webfont.woff') format('woff');
+    src: url('fonts/noah-regular-webfont.woff2') format('woff2'), url('fonts/noah-regular-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
@@ -84,7 +84,6 @@ nav a {
 }
 
 .glass p {
-    font-family: "noah-regular", sans-serif;
     text-align: left;
 }
 
@@ -127,6 +126,10 @@ h2 {
     text-align: center !important;
     color: #292929;
     z-index: 20;
+}
+
+footer {
+    padding-bottom: 24px;
 }
 
 footer section {
