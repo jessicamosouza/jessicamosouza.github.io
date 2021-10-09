@@ -15,29 +15,20 @@
     src: url(fonts/Bellota.ttf);
 }
 
-.noah {
-    font-family: "noah-regular";
-}
-
 body {
     background: url(port.png);
     background-color: #F4F4F4;
+    font-family: "noah-regular";
 }
 
 header {
     padding-top: 32px;
     height: 100px;
-    background: rgba(255, 255, 255, .3);
-    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
-    /* filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, .3)); */
-    z-index: 10;
-    width: 100%;
-}
-
-.wrapper {
     display: flex;
     width: 1170px;
     margin: 0 auto;
+    flex-direction: row;
+    align-items: center;
 }
 
 .logo {
@@ -50,6 +41,7 @@ header {
 
 nav {
     flex: 2;
+    align-content: center;
     float: right;
 }
 
@@ -63,7 +55,8 @@ nav a {
 }
 
 main {
-    min-height: 500px;
+    width: auto;
+    height: auto;
     align-items: center;
     justify-content: center;
 }
@@ -73,7 +66,6 @@ main {
     width: 1170px;
     height: 400px;
     align-items: center;
-    background: rgba(255, 255, 255, 0.5);
     border-radius: 2rem;
     display: flex;
 }
@@ -109,10 +101,6 @@ main {
     font-weight: 700;
 }
 
-h2 {
-    font-family: Bellota, cursive;
-}
-
 .note {
     padding-bottom: 16px;
     font-family: Bellota;
@@ -124,22 +112,22 @@ h2 {
 }
 
 footer {
-    padding-bottom: 24px;
+    width: 1170px;
+    margin: 0 auto;
+    padding: 24px 0;
     display: flex;
-    flex-direction: row-reverse;
-    background: rgba(255, 255, 255, 0.3);
-    font-size: 12px;
-    width: 100%;
+    flex-direction: row;
     height: auto;
     z-index: 10;
-    position: fixed;
+    align-items: center;
+    justify-content: center;
 }
 
 .footer-note {
-    padding-top: 16px;
     font-size: 10px;
     color: #868686;
     flex: 1;
+    text-align: right;
 }
 
 .footer-note a {
@@ -169,17 +157,6 @@ a:focus {
     color: #292929 !important;
 }
 
-.active {
-    font-weight: 800;
-    border-bottom-style: solid;
-    border-bottom-width: 3px;
-    border-bottom-color: #a9a3db;
-    background: -webkit-linear-gradient(0deg, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)), linear-gradient(93.37deg, #C8A8F8 3.71%, #66ABF4 35.38%, #C8A8F8 68.45%, #66ABF4 92.2%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-}
-
 a:hover {
     background: -webkit-linear-gradient(0deg, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)), linear-gradient(93.37deg, #C8A8F8 3.71%, #66ABF4 35.38%, #C8A8F8 68.45%, #66ABF4 92.2%);
     -webkit-background-clip: text;
@@ -192,7 +169,7 @@ a:hover {
 
 @media screen and (max-width: 1280px) {
     .glass {
-        margin: 48px auto;
+        margin: 0 auto;
         flex-direction: column;
         width: 100%;
         padding: 0;
@@ -200,9 +177,11 @@ a:hover {
         height: auto;
         min-height: max-content;
     }
-    .wrapper {
-        width: 100%;
+    header {
+        width: auto;
         height: auto;
+        flex-direction: column;
+        padding-top: 16px;
     }
     header nav a {
         font-size: 16px;
@@ -221,7 +200,6 @@ a:hover {
     footer {
         width: auto;
         height: 100%;
-        flex-direction: column-reverse;
         position: relative;
     }
 }
@@ -229,11 +207,12 @@ a:hover {
 
 /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
 
-@media screen and (max-width: 345px) {
+@media screen and (max-width: 500px) {
     header {
         flex-direction: column;
         width: auto;
         height: auto;
+        padding-top: 16px;
     }
     header nav {
         line-height: 200%;
@@ -242,5 +221,13 @@ a:hover {
     header nav a {
         font-size: 16px;
         margin-top: 0;
+    }
+    footer {
+        flex-direction: column;
+        width: auto;
+        height: auto;
+    }
+    .footer-note {
+        text-align: center;
     }
 }
