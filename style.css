@@ -31,39 +31,26 @@ header {
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
     /* filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, .3)); */
     z-index: 10;
-    position: fixed;
     width: 100%;
 }
 
-@media screen and (max-width: 600px) {
-    .glass {
-        width: 100%;
-    }
-}
-
 .wrapper {
+    display: flex;
     width: 1170px;
     margin: 0 auto;
 }
 
 .logo {
-    float: left;
+    flex: 1;
     width: 144px;
     height: 100px;
     left: 0px;
     top: 16px;
 }
 
-main {
-    min-height: 700px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
 nav {
+    flex: 2;
     float: right;
-    line-height: 100px;
 }
 
 nav a {
@@ -75,8 +62,14 @@ nav a {
     color: #292929;
 }
 
+main {
+    min-height: 500px;
+    align-items: center;
+    justify-content: center;
+}
+
 .glass {
-    margin: 200px 150px 80px 150px;
+    margin: 80px 150px;
     width: 1170px;
     height: 400px;
     align-items: center;
@@ -94,17 +87,17 @@ nav a {
     line-height: 45px;
     letter-spacing: -0.02em;
     flex: 2;
-    padding-left: 24px;
+    padding: 24px;
 }
 
 .picture {
     margin-right: 0px;
-    display: flex;
     flex: 1;
-    align-items: center;
-    padding: 0px 24px;
-    max-width: 264px;
-    max-height: 264px;
+    padding: 24px;
+    min-width: 108px;
+    min-height: 108px;
+    display: block;
+    height: auto;
 }
 
 .gradient-text {
@@ -127,26 +120,26 @@ h2 {
     line-height: 80%;
     text-align: center;
     color: #292929;
-    z-index: 20;
+    width: auto;
 }
 
 footer {
     padding-bottom: 24px;
-}
-
-footer section {
+    display: flex;
+    flex-direction: row-reverse;
     background: rgba(255, 255, 255, 0.3);
     font-size: 12px;
-    z-index: 300;
-    position: fixed;
     width: 100%;
+    height: auto;
+    z-index: 10;
+    position: fixed;
 }
 
 .footer-note {
     padding-top: 16px;
     font-size: 10px;
     color: #868686;
-    float: right;
+    flex: 1;
 }
 
 .footer-note a {
@@ -154,7 +147,7 @@ footer section {
 }
 
 .icons-sm {
-    float: left;
+    flex: 2;
 }
 
 .eva:hover {
@@ -194,7 +187,60 @@ a:hover {
     background-clip: text;
 }
 
-.about {
-    font-size: 24px;
-    margin-right: 200px;
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+
+@media screen and (max-width: 1280px) {
+    .glass {
+        margin: 48px auto;
+        flex-direction: column;
+        width: 100%;
+        padding: 0;
+        top: 70px;
+        height: auto;
+        min-height: max-content;
+    }
+    .wrapper {
+        width: 100%;
+        height: auto;
+    }
+    header nav a {
+        font-size: 16px;
+    }
+    .glass p {
+        font-size: 32px;
+        text-align: left;
+        left: 35%;
+        top: 60%;
+        opacity: 50%;
+    }
+    .note {
+        font-size: 12px;
+        width: auto;
+    }
+    footer {
+        width: auto;
+        height: 100%;
+        flex-direction: column-reverse;
+        position: relative;
+    }
+}
+
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+
+@media screen and (max-width: 345px) {
+    header {
+        flex-direction: column;
+        width: auto;
+        height: auto;
+    }
+    header nav {
+        line-height: 200%;
+        align-items: center;
+    }
+    header nav a {
+        font-size: 16px;
+        margin-top: 0;
+    }
 }
