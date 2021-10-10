@@ -56,7 +56,6 @@
     }
     
     main section {
-        flex: 1;
         position: relative;
         margin: 150px 150px;
         width: auto;
