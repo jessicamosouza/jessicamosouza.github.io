@@ -19,7 +19,7 @@
         background: url(port.png);
         background-size: cover;
         background-color: #F4F4F4;
-        font-family: "noah-regular";
+        font-family: "noah-regular", sans-serif;
     }
     
     header {
@@ -36,8 +36,6 @@
         flex: 1;
         width: 144px;
         height: 100px;
-        left: 0px;
-        top: 16px;
     }
     
     nav {
@@ -47,44 +45,23 @@
     }
     
     nav a {
+        color: #292929;
         text-decoration: none;
         letter-spacing: 1.5px;
         text-transform: uppercase;
         font-size: 18px;
         margin: 0 10px;
-        color: #292929;
     }
     
     main section {
         position: relative;
-        margin: 150px 150px;
+        margin: 40px 150px;
         width: auto;
         height: auto;
         align-items: center;
         justify-content: center;
         display: flex;
         flex-direction: row;
-    }
-    
-    .note {
-        padding-bottom: 16px;
-        font-family: Bellota;
-        font-size: 24px;
-        line-height: 80%;
-        text-align: center;
-        color: #292929;
-        width: auto;
-        flex: 2;
-        position: relative;
-    }
-    
-    .text {
-        font-size: 40px;
-        line-height: 45px;
-        letter-spacing: -0.02em;
-        flex: 2;
-        padding: 24px;
-        text-align: left;
     }
     
     .picture {
@@ -97,6 +74,29 @@
         min-height: 108px;
         display: block;
         height: auto;
+    }
+    
+    .text {
+        color: #292929;
+        font-size: 40px;
+        line-height: 45px;
+        letter-spacing: -0.02em;
+        flex: 2;
+        padding: 24px;
+        text-align: left;
+    }
+    
+    .note {
+        color: #292929;
+        padding-bottom: 16px;
+        font-family: Bellota, sans-serif;
+        font-size: 24px;
+        line-height: 80%;
+        text-align: center;
+        color: #292929;
+        width: auto;
+        position: relative;
+        margin-bottom: 90px;
     }
     
     .gradient-text {
@@ -143,6 +143,10 @@
         flex: 2;
     }
     
+    .eva {
+        color: #292929;
+    }
+    
     .eva:hover {
         border-radius: 50%;
         background: -webkit-linear-gradient(0deg, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)), linear-gradient(93.37deg, #C8A8F8 3.71%, #66ABF4 35.38%, #C8A8F8 68.45%, #66ABF4 92.2%);
@@ -159,7 +163,7 @@
     a:link,
     a:visited,
     a:focus {
-        color: #292929 !important;
+        color: #292929;
     }
     
     a:hover {
