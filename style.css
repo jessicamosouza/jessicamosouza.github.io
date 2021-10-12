@@ -58,9 +58,6 @@
         overflow: none;
         top: auto;
         padding-top: 40px;
-    }
-    
-    main section {
         position: relative;
         margin: 0 auto;
         width: 960px;
@@ -72,17 +69,7 @@
         overflow-y: auto;
     }
     
-    .picture {
-        margin-right: 0px;
-        flex: 1;
-        padding: 24px;
-        max-width: 400px;
-        max-height: 400px;
-        min-width: 108px;
-        min-height: 108px;
-        display: block;
-        height: auto;
-    }
+    main section {}
     
     .text {
         color: #292929;
