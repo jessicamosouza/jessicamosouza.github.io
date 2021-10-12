@@ -24,12 +24,13 @@
     
     header {
         padding-top: 32px;
-        height: 100px;
         display: flex;
         width: 1170px;
         margin: 0 auto;
         flex-direction: row;
         align-items: center;
+        overflow: hidden;
+        height: 10vh;
     }
     
     .logo {
@@ -53,15 +54,22 @@
         margin: 0 10px;
     }
     
+    main {
+        overflow: none;
+        top: auto;
+        padding-top: 40px;
+    }
+    
     main section {
         position: relative;
-        margin: 40px 150px;
-        width: auto;
+        margin: 0 auto;
+        width: 960px;
         height: auto;
         align-items: center;
         justify-content: center;
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
+        overflow-y: auto;
     }
     
     .picture {
@@ -81,9 +89,10 @@
         font-size: 40px;
         line-height: 45px;
         letter-spacing: -0.02em;
-        flex: 2;
         padding: 24px;
         text-align: left;
+        flex: 1;
+        margin: 24px;
     }
     
     .note {
@@ -97,6 +106,7 @@
         width: auto;
         position: relative;
         margin-bottom: 90px;
+        flex: 2;
     }
     
     .gradient-text {
@@ -114,6 +124,8 @@
         bottom: 0;
         width: 100%;
         background-color: #FDFDFD;
+        overflow: hidden;
+        height: 12vh;
     }
     
     footer {
@@ -178,6 +190,8 @@
         main {
             margin-top: -60px;
             margin-bottom: 90px;
+            top: auto;
+            padding-top: 32px;
         }
         main section {
             margin: 0 auto;
@@ -209,15 +223,20 @@
             width: auto;
             margin-bottom: 150px;
         }
+        .footer {
+            padding-bottom: 32px;
+        }
         footer {
             width: auto;
             height: 100%;
             position: relative;
             flex-direction: column;
             height: auto;
+            padding-bottom: 24px;
         }
         .footer-note {
             text-align: center;
+            padding-top: 16px;
         }
     }
     /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
