@@ -35,8 +35,6 @@
     
     .logo {
         flex: 1;
-        width: 144px;
-        height: 100px;
     }
     
     nav {
@@ -46,7 +44,6 @@
     }
     
     nav a {
-        color: #292929;
         text-decoration: none;
         letter-spacing: 1.5px;
         text-transform: uppercase;
@@ -55,7 +52,6 @@
     }
     
     main {
-        overflow: none;
         top: auto;
         padding-top: 40px;
         position: relative;
@@ -69,13 +65,10 @@
         overflow-y: auto;
     }
     
-    main section {}
-    
     .text {
         color: #292929;
         font-size: 40px;
         line-height: 45px;
-        letter-spacing: -0.02em;
         padding: 24px;
         text-align: left;
         flex: 1;
@@ -138,10 +131,6 @@
         color: #868686;
     }
     
-    .icons-sm {
-        flex: 2;
-    }
-    
     .eva {
         color: #292929;
     }
@@ -175,19 +164,9 @@
     
     @media screen and (max-width: 1280px) {
         main {
-            margin-top: -60px;
-            margin-bottom: 90px;
-            top: auto;
             padding-top: 32px;
-        }
-        main section {
-            margin: 0 auto;
-            flex-direction: column;
-            width: 100%;
-            padding: 0;
-            top: 70px;
-            height: auto;
-            min-height: max-content;
+            width: auto;
+            max-width: 960px;
         }
         header {
             width: auto;
@@ -247,8 +226,5 @@
             flex-direction: column;
             width: auto;
             height: auto;
-        }
-        .footer-note {
-            text-align: center;
         }
     }
