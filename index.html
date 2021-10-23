@@ -14,26 +14,27 @@
 </head>
 
 <body>
-    <!-- Navbar -->
-    <header>
-        <div>
-            <img class="logo" src="assets/logo.png" alt="Jeh.Design logo" \>
-        </div>
-        <div>
-            <nav id="navbar">
-                <a href="#about">About</a>
-                <a href="#projects" target="_blank">Projects</a>
-                <button class="btn-hire-me"><a href="https://www.linkedin.com/in/jehhmarques/" target="_blank" style="color: var(--bg-color);" >Hire me</a></button>
-            </nav>
-            <button class="burger-menu" id="burger-menu">
-                <ion-icon class="bars" name="menu-outline"></ion-icon>
-              </button>
-        </div>
-    </header>
-
+    <!-- Viewport -->
     <main>
+        <!-- Navbar -->
+        <div class="wrapper header">
+            <header>
+                <img class="logo" src="assets/logo.png" alt="Jeh.Design logo" \>
+                <div>
+                    <nav id="navbar" class="navbar">
+                        <a href="#about">About</a>
+                        <a href="#projects" target="_blank">Projects</a>
+                        <button class="btn-hire-me"><a href="https://www.linkedin.com/in/jehhmarques/" target="_blank" style="color: var(--bg-color);" >Hire me</a></button>
+                    </nav>
+                    <button class="burger-menu" id="burger-menu">
+                            <ion-icon class="bars" name="menu-outline"></ion-icon>
+                        </button>
+                </div>
+            </header>
+        </div>
+
         <!-- Hero Section -->
-        <section id="welcome-section" id="home">
+        <section class="welcome" id="welcome-section" id="home">
             <div class="hero">
                 <div class="bio">
                     <h4>Hi! I'm Jéssica.</h4>
@@ -51,54 +52,83 @@
                         <p>About</p>
                     </button>
                 </div>
-
-                <div class="foot-main">
-                    <div class="bx-icons">
-                        <nav>
-                            <a href="http://twitter.com/whatever_jess" target="_blank">
-                                <span class="iconify" data-icon="bx:bxl-twitter" style="color: #799dd2;" data-height="32"></span>
-                            </a>
-                            <a href="https://www.linkedin.com/in/jehhmarques/" target="_blank">
-                                <span class="iconify" data-icon="bx:bxl-linkedin" style="color: #799dd2;" data-height="32"></span>
-                            </a>
-                            <a href="https://www.behance.net/jssicamarques3" target="_blank">
-                                <span class="iconify" data-icon="bx:bxl-behance" style="color: #799dd2;" data-height="32"></span>
-                            </a>
-                            <a href="hhttps://github.com/jessicamosouza" target="_blank">
-                                <span class="iconify" data-icon="bx:bxl-github" style="color: #799dd2;" data-height="32"></span>
-                            </a>
-
-
-                        </nav>
-                    </div>
-                    <div class="note">
-                        <p>This portfolio was designed and coded by me.</p>
-                    </div>
-
-                </div>
             </div>
 
         </section>
 
-        <!-- More about -->
-        <section id="about">
+        <!-- Footer Section -->
+        <div class="wrapper footer">
+            <div class="foot-main">
+                <div class="bx-icons">
+                    <nav>
+                        <a href="http://twitter.com/whatever_jess" target="_blank">
+                            <span class="iconify" data-icon="bx:bxl-twitter" style="color: #799dd2;" data-height="32"></span>
+                        </a>
+                        <a href="https://www.linkedin.com/in/jehhmarques/" target="_blank">
+                            <span class="iconify" data-icon="bx:bxl-linkedin" style="color: #799dd2;" data-height="32"></span>
+                        </a>
+                        <a href="https://www.behance.net/jssicamarques3" target="_blank">
+                            <span class="iconify" data-icon="bx:bxl-behance" style="color: #799dd2;" data-height="32"></span>
+                        </a>
+                        <a id="profile-link" href="hhttps://github.com/jessicamosouza" target="_blank">
+                            <span class="iconify" data-icon="bx:bxl-github" style="color: #799dd2;" data-height="32"></span>
+                        </a>
+                    </nav>
+                </div>
+                <div class="note">
+                    <p>This portfolio was designed and coded by me.</p>
+                </div>
 
-        </section>
-
-        <!-- Skills section -->
-
-        <!-- Projects section - The projects section should contain at least one link to a project. -->
-        <section id="projects">
-
-        </section>
-
-        <!-- Contact section -->
-
-        <!-- Social accounts - Fixed to the right -->
-
-        <!-- Scroll to top -->
+            </div>
+        </div>
 
     </main>
+
+
+    <!-- More about -->
+    <section id="about">
+
+    </section>
+
+    <!-- Skills section -->
+
+    <!-- Projects section - The projects section should contain at least one link to a project. -->
+    <section id="projects" class="container-column">
+        <div class="MyProjects">
+            <h2 class="project-tile">My Projects</h2>
+        </div>
+        <div class="container-row">
+            <div class="box">
+                <a href="https://www.behance.net/gallery/118782783/DAILY-UI-012-E-COMMERCE" id="plant"><img class="box-img" src="https://i.ibb.co/94Xypg7/aaaaa.png" alt=""></a>
+
+            </div>
+            <div class="box">
+                <a href="https://www.behance.net/gallery/118467445/Daily-UI-009-Music-Player" id="music"><img class="box-img" src="https://i.ibb.co/FDpyhXj/33-Instagram-post-7.png" alt=""></a>
+            </div>
+            <div class="box">
+                <img class="box-img" src="https://i.ibb.co/kXRvy4m/6-Instagram-post-7.png" width="872px" alt="">
+            </div>
+            <div class="box">
+                <a href="https://www.behance.net/gallery/128235375/Interpreteme-Projeto-Cubos-Academy-2021" id="interprete"><img class="box-img" src="https://i.ibb.co/x2vT1W7/Instagram-post-9.png" alt=""></a>
+
+            </div>
+            <div class="box">
+                <a href="https://www.behance.net/gallery/126708341/Explore-the-World-new-version" id="explore-app"></a>
+                <img class="box-img" src="https://i.ibb.co/xC1pSnC/Instagram-post-7.png" alt="">
+            </div>
+            <div class="box">
+                <img class="box-img" src="https://i.ibb.co/DpbfgV9/Instagram-post-87.png" alt="">
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact section -->
+
+    <!-- Social accounts - Fixed to the right -->
+
+    <!-- Scroll to top -->
+
+
 
     <!-- Footer section -->
     <footer>

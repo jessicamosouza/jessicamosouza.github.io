@@ -5,6 +5,7 @@
 :root {
     --font-family: "Quicksand", sans-serf;
     --normal-font: 400;
+    --semibold-font: 600;
     --bold-font: 700;
     --bolder-font: 900;
     --bg-color: #F2F4F5;
@@ -27,212 +28,209 @@ html {
     scroll-behavior: smooth;
 }
 
-
-/* CSS Resets */
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+body {
+    font-size: 20px;
+    overflow-x: hidden;
+    background: var(--bg-color) (cover);
+    font-family: var(--font-family);
 }
 
+main {
+    /* Viewport */
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.wrapper {
+    background-color: white;
+    width: 100%;
+    left: 0;
+    top: 0;
+    padding: 1em;
+    z-index: 1;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-around;
+}
+
+
+/* Links */
+
 a {
-    text-decoration: none;
     color: var(--dark-text);
+    text-decoration: none;
 }
 
 a:hover {
     color: var(--secondary-color);
 }
 
-body {
-    background: url(assets/bg.png);
-    background-size: cover;
-    background-color: var(--bg-color);
-    font-family: var(--font-family);
+
+/* Links End*/
+
+
+/* Header */
+
+.header {
+    order: 1;
 }
 
 header {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
     top: 0;
     left: 0;
+    align-content: center;
+    align-items: stretch;
+    justify-content: space-around;
+    padding: 1em;
     z-index: 1;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1.5rem 3.5rem;
 }
 
 .logo {
-    width: 150px;
+    order: 1;
     height: auto;
-    align-self: stretch;
+    width: 150px;
+}
+
+.navbar {
+    order: 2;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    font-weight: var(--bold-font);
+    gap: 1.9rem;
+    justify-content: center;
 }
 
 header a:hover {
-    color: var(--secondary-color);
     border-bottom: 2px solid var(--secondary-color);
+    color: var(--secondary-color);
 }
 
-header nav {
-    gap: 1.9rem;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    font-weight: var(--bold-font);
-}
-
-header nav a {
+.navbar a {
+    font-size: 18px;
     transition: var(--transition);
-    font-size: 18px;
 }
 
-.btn-hire-me {
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    padding: 8px 32px;
-    background: var(--primary-color);
-    border: 2px solid var(--primary-color);
-    border-radius: 4px;
-    color: var(--light-text);
-    font-weight: var(--bold-font);
-    font-size: 18px;
+.burger-menu {
+    border: 0;
+    color: var(--primary-color);
+    cursor: pointer;
+    display: none;
+    font-size: 2rem;
 }
 
+
+/* Header End */
+
+
+/* Hero */
+
+.welcome {
+    order: 2;
+}
+
+.hero {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    margin: auto;
+    max-width: 68.75rem;
+    padding-top: 120px;
+}
+
+.bio {
+    align-items: center;
+    order: 1;
+    padding: .625rem;
+    width: auto;
+}
+
+.bio h1 {
+    align-self: center;
+    color: var(--primary-color);
+    font-size: 2.8em;
+    letter-spacing: -.02em;
+    margin-bottom: var(--bottom-margin);
+}
+
+.bio h4 {
+    align-self: center;
+    color: var(--dark-text);
+    font-size: 1.2em;
+    font-weight: var(--semibold-font);
+    letter-spacing: -.02em;
+    margin-bottom: var(--bottom-margin);
+    margin-top: -0.4em;
+}
+
+.bio-text {
+    align-self: center;
+    color: var(--dark-text);
+    font-size: 1em;
+    letter-spacing: -.02em;
+    line-height: var(--line-height);
+    max-width: 692px;
+    opacity: 0.8;
+    padding: .3rem 0;
+}
+
+.btn {
+    order: 2;
+    margin-top: 24px;
+}
+
+.btn-hire-me,
 .btn-projects {
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    padding: 8px 32px;
     background: var(--primary-color);
     border: 2px solid var(--primary-color);
     border-radius: 4px;
     color: var(--light-text);
-    font-weight: var(--bold-font);
+    display: inline-block;
     font-size: 18px;
+    font-weight: var(--bold-font);
+    padding: 8px 32px;
+    text-align: center;
+    text-decoration: none;
 }
 
 .btn-about {
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    padding: 8px 32px;
     background: var(--bg-color);
     border: 2px solid var(--primary-color);
     border-radius: 4px;
     color: var(--primary-color);
-    font-weight: var(--bold-font);
+    display: inline-block;
     font-size: 18px;
-    margin: 0px 32px;
+    font-weight: var(--bold-font);
+    margin: 0 32px;
+    padding: 8px 32px;
+    text-align: center;
+    text-decoration: none;
 }
 
-.burger-menu {
-    color: var(--primary-color);
-    font-size: 2rem;
-    border: 0;
-    background-color: transparent;
-    cursor: pointer;
-    display: none;
-}
 
-.hero {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 2.5rem;
-    max-width: 68.75rem;
-    margin: auto;
-    flex-direction: column;
-    align-content: center;
-    padding-top: 70px;
-}
+/* Hero End */
 
-.bio {
-    width: auto;
-    padding: 0.625rem;
-    flex: 1;
-    align-items: center;
-}
-
-.bio h1 {
-    margin-bottom: var(--bottom-margin);
-    font-size: 56px;
-    letter-spacing: -0.02em;
-    color: var(--primary-color);
-    align-self: center;
-}
-
-.bio h4 {
-    margin-top: -8px;
-    margin-bottom: var(--bottom-margin);
-    font-size: 24px;
-    letter-spacing: -0.02em;
-    color: var(--dark-text);
-    font-weight: 600;
-    align-self: center;
-}
-
-.bio-text {
-    max-width: 692px;
-    line-height: var(--line-height);
-    color: var(--dark-text);
-    padding: 0.3rem 0;
-    font-size: 20px;
-    letter-spacing: -0.02em;
-    opacity: 0.8;
-    align-self: center;
-}
-
-.btn {
-    margin-top: 24px;
-    flex: 2;
-}
-
-.bx-icons {
-    flex: 1;
-    justify-content: center;
-    align-items: center;
-    padding: 8px;
-}
-
-.bx-icons a {
-    color: var(--primary-color);
-}
-
-.bxl-twitter:before {
-    width: 32px;
-    height: 32px;
-}
-
-.bxl-linkedin:before {
-    width: 32px;
-    height: 32px;
-}
-
-.bxl-behance:before {
-    width: 32px;
-    height: 32px;
-}
-
-.bxl-github:before {
-    width: 32px;
-    height: 32px;
+.footer {
+    order: 3;
 }
 
 .foot-main {
     display: flex;
-    flex-direction: row;
-    width: 1220px;
-    height: 50px;
-    left: 111px;
-    top: 705px;
-}
-
-.note {
-    font-family: Bellota, sans-serif;
-    font-size: 16px;
-    color: var(--dark-text);
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    align-content: center;
+    align-items: stretch;
+    justify-content: space-around;
+    padding: 1em;
+    z-index: 1;
 }
 
 .iconify {
@@ -240,6 +238,107 @@ header nav a {
 }
 
 .iconify:hover {
-    transition: all 0.7s;
     transform: scale(1.2) rotate(360deg);
+    transition: all .7s;
 }
+
+.bx-icons {
+    order: 1;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+}
+
+.bx-icons a {
+    color: var(--primary-color);
+}
+
+.bxl-twitter:before,
+.bxl-linkedin:before,
+.bxl-behance:before,
+.bxl-github:before {
+    height: 32px;
+    width: 32px;
+}
+
+.note {
+    order: 1;
+    color: var(--dark-text);
+    font-family: Bellota, sans-serif;
+    font-size: 16px;
+}
+
+
+/* Footer End */
+
+
+/* Projects Section */
+
+.container-column {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    background-color: var(--primary-color);
+}
+
+.MyProjects {
+    order: 1;
+    color: var(--light-text);
+    font-size: 2.4em;
+    font-weight: var(--bolder-font);
+}
+
+.container-row {
+    order: 2;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0.8em;
+    padding-bottom: 32px;
+}
+
+.box-img {
+    display: block;
+    max-width: 872px;
+    height: auto;
+    justify-self: center;
+    align-self: center;
+    border-radius: 4px;
+}
+
+.box {
+    display: block;
+    max-width: 872px;
+    height: auto;
+    padding: 4px 4px;
+    border: 1px solid var(--tertiary-color);
+    border-radius: 4px;
+}
+
+
+/* Projects Section End */
+
+
+/* Media Queries */
+
+@media screen and (min-width: 1440px) {
+    .bio {
+        width: 100%;
+        height: auto;
+    }
+    .box,
+    .box-img {
+        display: block;
+        min-width: 436px;
+        width: 100%;
+        height: auto;
+    }
+}
+
+
+/* Media Queries End*/
