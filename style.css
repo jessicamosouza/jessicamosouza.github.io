@@ -8,7 +8,8 @@
     --semibold-font: 600;
     --bold-font: 700;
     --bolder-font: 900;
-    --bg-color: #F2F4F5;
+    --bg-whitesmoke-color: whitesmoke;
+    --bg-blue-color: #A0B9DF;
     --primary-color: #799DD2;
     --secondary-color: #A0B9DF;
     --tertiary-color: #C6D5EC;
@@ -29,23 +30,24 @@ html {
 }
 
 body {
+    margin: 0;
     font-size: 20px;
     overflow-x: hidden;
-    background: var(--bg-color) (cover);
+    background: var(--bg-whitesmoke-color);
     font-family: var(--font-family);
 }
 
 main {
     /* Viewport */
     height: 100vh;
+    width: 88vw;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
 }
 
 .wrapper {
-    background-color: white;
-    width: 100%;
+    width: 88vw;
     left: 0;
     top: 0;
     padding: 1em;
@@ -79,9 +81,10 @@ a:hover {
 }
 
 header {
+    /* padding: 1rem 6rem; */
     display: flex;
     flex-direction: row-reverse;
-    width: 100%;
+    width: 88vw;
     top: 0;
     left: 0;
     align-content: center;
@@ -141,7 +144,7 @@ header a:hover {
     flex-direction: column;
     gap: 2.5rem;
     margin: auto;
-    max-width: 68.75rem;
+    max-width: 70vw;
     padding-top: 120px;
 }
 
@@ -201,7 +204,7 @@ header a:hover {
 }
 
 .btn-about {
-    background: var(--bg-color);
+    background: var(--bg-whitesmoke-color);
     border: 2px solid var(--primary-color);
     border-radius: 4px;
     color: var(--primary-color);
@@ -223,7 +226,7 @@ header a:hover {
 
 .foot-main {
     display: flex;
-    width: 100%;
+    width: 88vw;
     bottom: 0;
     left: 0;
     align-content: center;
@@ -272,39 +275,79 @@ header a:hover {
 /* Footer End */
 
 
-/* Projects Section */
+/* About Section */
 
-.container-column {
-    width: 100%;
-    height: auto;
+.more-about {
+    width: 88vw;
+    height: 100vh;
+    background-color: var(--bg-blue-color);
+    padding: 1rem 6rem;
+    color: whitesmoke;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 24px;
-    background-color: var(--primary-color);
+    justify-content: center;
+    align-items: stretch;
 }
 
-.MyProjects {
-    order: 1;
-    color: var(--light-text);
-    font-size: 2.4em;
-    font-weight: var(--bolder-font);
+.more-about h2 {
+    margin-bottom: var(--bottom-margin);
+    text-align: center;
+}
+
+.more-about p {
+    line-height: var(--line-height);
+    margin: 4px;
+}
+
+
+/* About Section End */
+
+
+/* Projects Section */
+
+.projects {
+    height: 100vh;
+    text-align: center;
+    margin: auto;
+}
+
+
+/* Create four equal columns that sits next to each other */
+
+.container-column {
+    -ms-flex: 50%;
+    /* IE10 */
+    flex: 50%;
+    max-width: 40%;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.project-title {
+    color: var(--primary-color);
 }
 
 .container-row {
-    order: 2;
+    display: -ms-flexbox;
+    /* IE10 */
     display: flex;
+    -ms-flex-wrap: wrap;
+    /* IE10 */
     flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+    padding: 0 4px 32px 4px;
     gap: 0.8em;
-    padding-bottom: 32px;
+    justify-content: center;
+    margin: auto;
 }
 
 .box-img {
-    display: block;
+    vertical-align: middle;
+    width: 100%;
     max-width: 872px;
+    min-width: 304px;
     height: auto;
     justify-self: center;
     align-self: center;
@@ -312,12 +355,35 @@ header a:hover {
 }
 
 .box {
-    display: block;
+    vertical-align: middle;
+    width: 100%;
     max-width: 872px;
+    min-width: 304px;
     height: auto;
     padding: 4px 4px;
     border: 1px solid var(--tertiary-color);
     border-radius: 4px;
+}
+
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+
+@media screen and (max-width: 800px) {
+    .container-column {
+        -ms-flex: 50%;
+        flex: 50%;
+        max-width: 40%;
+    }
+}
+
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+
+@media screen and (max-width: 360px) {
+    .container-column {
+        -ms-flex: 100%;
+        max-width: 100%;
+    }
 }
 
 
@@ -326,6 +392,8 @@ header a:hover {
 
 /* Media Queries */
 
+
+/* 
 @media screen and (min-width: 1440px) {
     .bio {
         width: 100%;
@@ -339,6 +407,88 @@ header a:hover {
         height: auto;
     }
 }
+ */
 
 
-/* Media Queries End*/
+/* Responsive layout - when the screen is less than 1280px wide, make the two columns stack on top of each other instead of next to each other */
+
+
+/* 
+@media screen and (max-width: 1280px) {
+    main {
+        width: auto;
+    }
+    .wrapper {
+        width: auto;
+        height: auto;
+        flex-direction: column;
+    }
+    .logo {
+        max-width: 150px;
+        width: auto;
+        height: auto;
+    }
+    .navbar {
+        display: hidden;
+        flex-direction: column;
+    }
+    text {
+        font-size: 32px;
+        text-align: left;
+        left: 35%;
+        top: 60%;
+        opacity: 50%;
+    }
+    .note {
+        font-size: 24px;
+        width: auto;
+        margin-bottom: 150px;
+    }
+    .footer {
+        padding-bottom: 32px;
+    }
+    footer {
+        width: auto;
+        height: 100%;
+        position: relative;
+        flex-direction: column;
+        height: auto;
+        padding-bottom: 24px;
+    }
+    .footer-note {
+        text-align: center;
+        padding-top: 16px;
+    }
+}
+
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+
+
+/* 
+@media screen and (max-width: 500px) {
+    header {
+        flex-direction: column;
+        width: auto;
+        height: auto;
+        padding-top: 16px;
+    }
+    header nav {
+        line-height: 200%;
+        align-items: center;
+    }
+    header nav a {
+        font-size: 16px;
+        margin-top: 0;
+    }
+    footer {
+        flex-direction: column;
+        width: auto;
+        height: auto;
+    }
+}
+
+*/
+
+
+/* Media Queries End */
