@@ -47,15 +47,15 @@ main {
 }
 
 .wrapper {
-    width: 88vw;
+    width: 100vw;
     left: 0;
     top: 0;
     padding: 1em;
     z-index: 1;
     display: flex;
     flex-direction: row;
-    align-content: center;
-    justify-content: space-around;
+    align-content: stretch;
+    justify-content: center;
 }
 
 
@@ -81,15 +81,14 @@ a:hover {
 }
 
 header {
-    /* padding: 1rem 6rem; */
     display: flex;
     flex-direction: row-reverse;
-    width: 88vw;
+    width: 100vw;
     top: 0;
     left: 0;
     align-content: center;
     align-items: stretch;
-    justify-content: space-around;
+    justify-content: space-between;
     padding: 1em;
     z-index: 1;
 }
@@ -101,6 +100,7 @@ header {
 }
 
 .navbar {
+    padding-right: 40px;
     order: 2;
     align-items: center;
     display: flex;
@@ -226,12 +226,12 @@ header a:hover {
 
 .foot-main {
     display: flex;
-    width: 88vw;
+    width: 100vw;
     bottom: 0;
     left: 0;
     align-content: center;
     align-items: stretch;
-    justify-content: space-around;
+    justify-content: space-between;
     padding: 1em;
     z-index: 1;
 }
@@ -265,6 +265,7 @@ header a:hover {
 }
 
 .note {
+    padding-right: 40px;
     order: 1;
     color: var(--dark-text);
     font-family: Bellota, sans-serif;
@@ -278,7 +279,7 @@ header a:hover {
 /* About Section */
 
 .more-about {
-    width: 88vw;
+    width: 100vw;
     height: 100vh;
     background-color: var(--bg-blue-color);
     padding: 1rem 6rem;
@@ -291,10 +292,10 @@ header a:hover {
 
 .more-about h2 {
     margin-bottom: var(--bottom-margin);
-    text-align: center;
 }
 
 .more-about p {
+    width: 50vw;
     line-height: var(--line-height);
     margin: 4px;
 }
