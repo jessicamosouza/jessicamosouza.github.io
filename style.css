@@ -65,3 +65,13 @@ h3 {
     font-weight: 300;
     color: var(--font-color-h3);
 }
+
+.iconify {
+    margin: 8px;
+    color: var(--font-color-h1);
+}
+
+.spin:hover {
+    transform: scale(1.2) rotate(360deg);
+    transition: all .7s;
+}
