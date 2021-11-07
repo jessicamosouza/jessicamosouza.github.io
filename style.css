@@ -4,6 +4,16 @@
     box-sizing: border-box;
 }
 
+@font-face {
+    font-family: Givonic;
+    src: url(/fonts/Givonic\ Variable.ttf);
+}
+
+@font-face {
+    font-family: Nottingham;
+    src: url(/fonts/Nottingham-Sans.otf);
+}
+
 :root {
     /* colors */
     --bg-color: #D8C7D8;
