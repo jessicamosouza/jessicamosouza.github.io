@@ -4,6 +4,14 @@
     box-sizing: border-box;
 }
 
+:root {
+    /* colors */
+    --bg-color: #D8C7D8;
+    --font-color-h1: #6C286C;
+    --font-color-h3: #8C588C;
+    --font-color-foot: #928698;
+}
+
 body {
     background-image: url(bg.svg);
     background-repeat: no-repeat;
