@@ -75,3 +75,22 @@ h3 {
     transform: scale(1.2) rotate(360deg);
     transition: all .7s;
 }
+
+.footer {
+    margin: 0;
+    padding: 0;
+    order: 2;
+    font-family: 'Givonic', sans-serif;
+    font-size: 14px;
+    line-height: 150%;
+    font-weight: 400;
+    color: var(--font-color-foot);
+}
+
+.footer p {
+    justify-self: right;
+}
+
+.footer u {
+    color: var(--font-color-h1);
+}
