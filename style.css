@@ -12,8 +12,10 @@
 }
 
 @font-face {
-    font-family: "Nottingham", sans-serif;
-    src: url(assets/Nottingham-Sans.otf);
+    font-family: 'nottinghamsans';
+    src: url('nottingham-sans-webfont.woff2') format('woff2'), url('nottingham-sans-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
 
 :root {
@@ -76,7 +78,7 @@ body {
 }
 
 h1 {
-    font-family: "Nottingham", sans-serif;
+    font-family: "nottinghamsans", sans-serif;
     font-weight: 600;
     color: var(--font-color-h1);
     margin: 0;
@@ -124,7 +126,7 @@ h1 {
 }
 
 h3 {
-    font-family: "Givonic", sans-serif;
+    font-family: "givonicregular", sans-serif;
     font-weight: 300;
     color: var(--font-color-h3);
     margin: 0;
