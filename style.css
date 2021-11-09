@@ -196,7 +196,6 @@ a {
     color: var(--color-detail);
     padding: 4px;
     min-width: 100%;
-    width: 100%;
 }
 
 .iconify:hover {
