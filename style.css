@@ -5,8 +5,10 @@
 }
 
 @font-face {
-    font-family: "Givonic", sans-serif;
-    src: url(assets/Givonic\ Variable.ttf) format('truetype');
+    font-family: 'givonicregular';
+    src: url('assets/givonic_variable-webfont.woff2') format('woff2'), url('assets/givonic_variable-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
 
 @font-face {
