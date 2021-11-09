@@ -6,7 +6,7 @@
 
 @font-face {
     font-family: "Givonic", sans-serif;
-    src: url(assets/Givonic\ Variable.ttf);
+    src: url(assets/Givonic\ Variable.ttf) format('truetype');
 }
 
 @font-face {
