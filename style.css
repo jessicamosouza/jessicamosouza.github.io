@@ -1,9 +1,41 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
 @font-face {
     font-family: "Givonic", sans-serif;
-    src: url(Givonic\ Variable.ttf);
+    src: url(assets/Givonic\ Variable.ttf Variable.ttf);
 }
 
 @font-face {
     font-family: "Nottingham", sans-serif;
-    src: url(Nottingham-Sans.otf);
+    src: url(assets/Nottingham-Sans.otf);
+}
+
+:root {
+    /* colors */
+    --bg-color: #D8C7D8;
+    --font-color-h1: #6C286C;
+    --font-color-h3: #8C588C;
+    --font-color-foot: #928698;
+}
+
+h1 {
+    font-family: "Nottingham", sans-serif;
+    font-weight: 600;
+    margin: 0;
+}
+
+h3 {
+    font-family: "Givonic", sans-serif;
+    font-weight: 300;
+    margin: 0;
+}
+
+img {
+    width: 24px;
+    height: 24px;
+    margin: 8px 16px;
 }
