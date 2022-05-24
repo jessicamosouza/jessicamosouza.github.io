@@ -20,52 +20,16 @@
 
 :root {
     /* colors */
-    --bg-color: #D8C7D8;
-    --font-color-h1: #6C286C;
-    --font-color-h3: #8C588C;
-    --color-detail: #824c8c;
-    --bg-color: #F5F1F5;
+    --bg-color: #F0F0F0;
+    --font-color-h1: #1D2020;
+    --font-color-h3: #404647;
+    --color-detail: #0C1618;
+    --bg-color: #F0F0F0;
 }
 
 html,
 body {
-    background: var(--bg-color) url(assets/Group\ 9.png);
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
     height: 100vh;
-}
-
-.scale-in-center {
-    -webkit-animation: scale-in-center 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-    animation: scale-in-center 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-}
-
-@-webkit-keyframes scale-in-center {
-    0% {
-        -webkit-transform: scale(0);
-        transform: scale(0);
-        opacity: 1;
-    }
-    100% {
-        -webkit-transform: scale(1);
-        transform: scale(1);
-        opacity: 1;
-    }
-}
-
-@keyframes scale-in-center {
-    0% {
-        -webkit-transform: scale(0);
-        transform: scale(0);
-        opacity: 1;
-    }
-    100% {
-        -webkit-transform: scale(1);
-        transform: scale(1);
-        opacity: 1;
-    }
 }
 
 .center {
@@ -74,7 +38,6 @@ body {
     justify-content: center;
     align-items: center;
     height: 98vh;
-    border: 2px dotted var(--color-detail);
 }
 
 h1 {
@@ -84,45 +47,6 @@ h1 {
     margin: 0;
     text-align: center;
     margin-bottom: 24px;
-}
-
-.scale-in-bottom {
-    -webkit-animation: scale-in-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-    animation: scale-in-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-}
-
-@-webkit-keyframes scale-in-bottom {
-    0% {
-        -webkit-transform: scale(0);
-        transform: scale(0);
-        -webkit-transform-origin: 50% 100%;
-        transform-origin: 50% 100%;
-        opacity: 1;
-    }
-    100% {
-        -webkit-transform: scale(1);
-        transform: scale(1);
-        -webkit-transform-origin: 50% 100%;
-        transform-origin: 50% 100%;
-        opacity: 1;
-    }
-}
-
-@keyframes scale-in-bottom {
-    0% {
-        -webkit-transform: scale(0);
-        transform: scale(0);
-        -webkit-transform-origin: 50% 100%;
-        transform-origin: 50% 100%;
-        opacity: 1;
-    }
-    100% {
-        -webkit-transform: scale(1);
-        transform: scale(1);
-        -webkit-transform-origin: 50% 100%;
-        transform-origin: 50% 100%;
-        opacity: 1;
-    }
 }
 
 h3 {
@@ -152,6 +76,7 @@ h3 {
         transform: scaleX(0);
         opacity: 1;
     }
+
     100% {
         -webkit-transform: scaleX(1);
         transform: scaleX(1);
@@ -165,6 +90,7 @@ h3 {
         transform: scaleX(0);
         opacity: 1;
     }
+
     100% {
         -webkit-transform: scaleX(1);
         transform: scaleX(1);
@@ -210,6 +136,7 @@ a {
     h1 {
         font-size: 64px;
     }
+
     h3 {
         font-size: 32px;
     }
@@ -222,6 +149,7 @@ a {
     h1 {
         font-size: 48px;
     }
+
     h3 {
         font-size: 24px;
     }
