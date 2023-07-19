@@ -30,4 +30,4 @@
             git init
             git add -A
             git commit -m "🚀 Deploy id ${GITHUB_RUN_ID}"
-            git push -f git@github.com:jessicamosouza/jessicamosouza.github.io.git main:gh-pages
+            git push -f git@github.com:jessicamosouza/jessicamosouza.github.io.git gh-pages
