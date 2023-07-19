@@ -13,22 +13,14 @@
         - uses: actions/setup-node@v3
           with:
             node-version: 14
-            cache: 'npm'
-        - name: setup git auth
-          env:
-            email: 'email@localhost'
-            username: 'robots'
-            access_token: ${{ secrets.GITHUB_TOKEN }}
-          run: |
-            git config --global user.email $email
-            git config --global user.name $username
-        - name: deploy to gh-pages
+        - name: Build
           run: |
             npm i
             NODE_ENV=production npm run build
-            cd dist
-            git init
-            git remote add origin git@github.com:jessicamosouza/jessicamosouza.github.io.git
-            git remote update
-            git commit -a -m "🚀 Deploy id ${GITHUB_RUN_ID}"
-            git push -f origin gh-pages
+        - name: Deploy
+          uses: peaceiris/actions-gh-pages@v3
+          if: ${{ github.ref == 'refs/heads/main' }}
+          with:
+            github_token: ${{ secrets.GITHUB_TOKEN }}
+            publish_dir: ./dist
+
