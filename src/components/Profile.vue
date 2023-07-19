@@ -2,7 +2,7 @@
     <div id="wrapper">
         <div class="content center is-large">
             <h1 class="is-1 mt-5">{{ msg }}</h1>
-            <p class="is-2">Software engineer & BSc Computer Science Student</p>
+            <p class="is-2">Software Engineer & BSc Computer Science Student</p>
             <div class="columns is-centered is-multiline navbar-menu">
                 <div class="column is-narrow">
                     <a
