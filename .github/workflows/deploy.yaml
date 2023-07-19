@@ -20,8 +20,6 @@
             username: 'robots'
             access_token: ${{ secrets.GITHUB_TOKEN }}
           run: |
-            git config --global credential.helper store
-            echo "https://${access_token}:x-oauth-basic@github.com" > ~/.git-credentials
             git config --global user.email $email
             git config --global user.name $username
         - name: deploy to gh-pages
