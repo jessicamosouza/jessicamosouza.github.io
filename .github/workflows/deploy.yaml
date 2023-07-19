@@ -12,7 +12,7 @@
             fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
         - uses: actions/setup-node@v3
           with:
-            node-version: 20
+            node-version: 14
             cache: 'npm'
         - name: setup git auth
           env:
@@ -27,7 +27,7 @@
         - name: deploy to gh-pages
           run: |
             npm i
-            npm run build
+            NODE_ENV=production npm run build
             cd dist
             git init
             git add -A
