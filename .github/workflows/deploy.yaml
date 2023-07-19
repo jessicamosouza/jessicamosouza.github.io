@@ -27,6 +27,7 @@
             npm i
             NODE_ENV=production npm run build
             cd dist
+            git init
             git remote add origin git@github.com:jessicamosouza/jessicamosouza.github.io.git
             git remote update
             git commit -a -m "🚀 Deploy id ${GITHUB_RUN_ID}"
