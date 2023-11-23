@@ -66,10 +66,6 @@ i {
     color: #000000;
 }
 
-template {
-    height: 100vh;
-}
-
 .center {
     display: flex;
     flex-direction: column;
