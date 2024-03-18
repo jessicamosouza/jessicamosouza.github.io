@@ -20,30 +20,6 @@
                     ><i class="fa-brands fa-linkedin"></i></a
                     >
                 </div>
-                <div class="column is-narrow">
-                    <a
-                        href="https://twitter.com/whatever_jess"
-                        target="_blank"
-                        rel="noopener"
-                    ><i class="fa-brands fa-square-twitter"></i></a
-                    >
-                </div>
-                <div class="column is-narrow">
-                    <a
-                        href="https://bsky.app/profile/jehh.dev"
-                        target="_blank"
-                        rel="noopener"
-                    ><i class="fa-solid fa-cloud"></i></a
-                    >
-                </div>
-                <div class="column is-narrow">
-                    <a
-                        href="https://hachyderm.io/@jessicasouza"
-                        target="_blank"
-                        rel="noopener"
-                    ><i class="fa-brands fa-mastodon"></i></a
-                    >
-                </div>
             </div>
         </div>
     </div>
